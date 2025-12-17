@@ -1,3 +1,3 @@
-# cloud-flowos.github.io
+# (CloudFlowOS)[cloud-flowos.github.io]
 
 simple github.io 'website' to download FlowOS
