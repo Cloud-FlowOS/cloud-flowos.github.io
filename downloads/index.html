@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FlowOS – Downloads</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="sticky-hero" id="header">
+        <div class="sticky-hero-inner">
+            <a href="../index.html" class="brand">FlowOS</a>
+
+            <div class="header-actions">
+                <a class="primary" href="../404/index.html">Get FlowOS</a>
+                <a class="secondary" href="../versions/index.html">View versions</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <h1>Downloads</h1>
+
+        <p>
+            FlowOS does not have a public release yet.
+            Downloads will be available once the system reaches a stable state.
+        </p>
+
+        <h2>Current Status</h2>
+        <ul>
+            <li>Bootloader: functional</li>
+            <li>Kernel: early development</li>
+            <li>Graphics: framebuffer working</li>
+            <li>Filesystem: in progress</li>
+        </ul>
+
+        <div class="actions" style="margin-top: 2rem;">
+            <a class="primary" href="../404/index.html">Download latest build</a>
+            <a class="secondary" href="../404/index.html">Download ISO</a>
+        </div>
+
+        <footer>
+            <p>© FlowOS Project</p>
+            <p>
+                License: Can be modified and redistributed only with permission
+                from the owner and with credit to the original project.
+            </p>
+        </footer>
+    </main>
+
+    <script>
+        const header = document.getElementById("header");
+        window.addEventListener("scroll", () => {
+            header.classList.toggle("scrolled", window.scrollY > 0);
+        });
+    </script>
+
+</body>
+</html>

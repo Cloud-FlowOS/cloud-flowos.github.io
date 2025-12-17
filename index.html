@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
@@ -10,19 +6,73 @@
         <title>FlowOS - Home</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <script src="" async defer></script>
 
-        
-        <header>
-            <h1>Home</h1>
-            <a href="dw.html">downloads</a>
-        </header>
-    </body>
+    <div class="sticky-hero" id="header">
+        <div class="sticky-hero-inner">
+            <a href="index.html" class="brand">FlowOS</a>
+
+            <div class="header-actions">
+                <a class="primary" href="downloads/index.html">Get FlowOS</a>
+                <a class="secondary" href="versions/index.html">View versions</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+    <p>
+        FlowOS is a modern 64-bit x86 UEFI operating system built from scratch
+        using <strong>Rust</strong> and <strong>x86-64 assembly</strong>.
+        It is designed to be minimal, educational, and extensible.
+    </p>
+
+    <h2>Key Features</h2>
+    <ul>
+        <li>UEFI-based bootloader</li>
+        <li>Microkernel architecture</li>
+        <li>Framebuffer graphics support</li>
+        <li>Integrated <strong>cx</strong> language compiler</li>
+        <li>Designed for custom applications</li>
+    </ul>
+
+    <h2>Architecture Overview</h2>
+    <ul>
+        <li><strong>Boot:</strong> UEFI (Rust)</li>
+        <li><strong>Kernel:</strong> x86-64 microkernel</li>
+        <li><strong>Filesystem:</strong> FAT32 (in progress)</li>
+        <li><strong>Target:</strong> Modern x64 systems</li>
+    </ul>
+
+    <div class="actions" style="margin-top: 2.5rem;">
+        <a class="primary" href="downloads/index.html">Get FlowOS</a>
+        <a class="secondary" href="readme/index.html">Read documentation</a>
+    </div>
+
+    <footer>
+        <p>© FlowOS Project</p>
+        <p>
+            License: Can be modified and redistributed only with permission
+            from the owner and with credit to the original project.
+        </p>
+    </footer>
+    </main>
+
+
+    <script>
+        const header = document.getElementById("header");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 0) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+
 </html>

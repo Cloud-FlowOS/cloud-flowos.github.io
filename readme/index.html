@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FlowOS – README</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- Sticky blurred header -->
+    <div class="sticky-hero" id="header">
+        <div class="sticky-hero-inner">
+            <a href="../index.html" class="brand">FlowOS</a>
+
+            <div class="header-actions">
+                <a class="primary" href="../downloads/index.html">Get FlowOS</a>
+                <a class="secondary" href="../versions/index.html">View versions</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <main class="markdown">
+
+        <h1>FlowOS – A Modern x64 UEFI Operating System</h1>
+
+        <p>
+            FlowOS is a minimal but feature-rich 64-bit operating system built from scratch
+            with Rust and x86-64 assembly. It boots via UEFI, includes integrated support
+            for the <strong>cx</strong> programming language compiler, and aims to provide
+            a solid foundation for custom applications.
+        </p>
+
+        <h2>Architecture</h2>
+        <ul>
+            <li><strong>Bootloader:</strong> UEFI-based bootloader written in Rust</li>
+            <li><strong>Kernel:</strong> Microkernel architecture with modular design</li>
+            <li><strong>Language Support:</strong> Integrated cx compiler for system utilities</li>
+            <li><strong>Graphics:</strong> Framebuffer graphics support for GUI applications</li>
+            <li><strong>Filesystem:</strong> FAT32 filesystem for application loading</li>
+        </ul>
+
+        <h2>Project Structure</h2>
+
+        <pre><code>flowos/
+├── bootloader/          # UEFI bootloader (Rust)
+├── kernel/              # Core kernel
+│   ├── src/
+│   │   ├── console.rs
+│   │   ├── memory.rs
+│   │   ├── interrupts.rs
+│   │   ├── graphics.rs
+│   │   └── main.rs
+│   └── Cargo.toml
+├── build.bat
+├── Makefile
+└── Cargo.toml
+</code></pre>
+
+        <h2>Requirements</h2>
+
+        <h3>System Requirements</h3>
+        <ul>
+            <li>Windows 11 64-bit or Linux/macOS</li>
+            <li>Rust toolchain (1.92+)</li>
+            <li>QEMU (recommended)</li>
+            <li>4GB+ RAM recommended</li>
+        </ul>
+
+        <h3>Software Dependencies</h3>
+
+        <pre><code># Install Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# Add UEFI target
+rustup target add x86_64-unknown-uefi
+
+# Install QEMU (Windows)
+winget install qemu
+</code></pre>
+
+        <h2>Building</h2>
+
+        <h3>On Windows</h3>
+        <pre><code>build.bat release
+build.bat debug
+</code></pre>
+
+        <h3>On Linux/macOS</h3>
+        <pre><code>make build-release
+make build-debug
+</code></pre>
+
+        <h2>Features</h2>
+
+        <h3>Implemented</h3>
+        <ul>
+            <li>UEFI bootloader</li>
+            <li>x86-64 kernel initialization</li>
+            <li>Serial console</li>
+            <li>Memory management</li>
+            <li>Interrupt handling</li>
+            <li>Framebuffer graphics</li>
+            <li>Panic diagnostics</li>
+        </ul>
+
+        <h3>In Progress</h3>
+        <ul>
+            <li>Filesystem support (FAT32)</li>
+            <li>Paging and virtual memory</li>
+            <li>Process management</li>
+            <li>cx compiler integration</li>
+        </ul>
+
+        <h3>Planned</h3>
+        <ul>
+            <li>Device drivers</li>
+            <li>Multitasking</li>
+            <li>System calls</li>
+            <li>Userspace</li>
+            <li>Browser / renderer</li>
+        </ul>
+
+        <h2>License</h2>
+        <p>
+            FlowOS is created as an educational project. Modify and use freely.
+        </p>
+
+        <h2>References</h2>
+        <ul>
+            <li><a href="https://wiki.osdev.org/">OSDev Wiki</a></li>
+            <li><a href="https://os.phil-opp.com/">Rust OS Development</a></li>
+            <li><a href="https://uefi.org/">UEFI Specification</a></li>
+        </ul>
+
+    </main>
+
+    <footer>
+        <p>© FlowOS Project</p>
+        <p>
+            License: Can be modified and redistributed only with permission
+            from the owner and with credit to the original project.
+        </p>
+    </footer>
+
+
+    <script>
+        const header = document.getElementById("header");
+        window.addEventListener("scroll", () => {
+            header.classList.toggle("scrolled", window.scrollY > 0);
+        });
+    </script>
+
+
+
+</body>
+</html>

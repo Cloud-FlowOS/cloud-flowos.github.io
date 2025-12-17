@@ -1,0 +1,116 @@
+/* Base */
+
+body {
+    font-family: "Segoe UI", SegoeUI, system-ui, sans-serif;
+    background: #ffffff;
+    color: #1b1b1b;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Button-like links ONLY */
+
+a.primary,
+a.secondary {
+    display: inline-block;
+    padding: 0.45rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+
+.sticky-hero {
+    position: sticky;
+    top: 0;
+    background: rgba(243, 243, 243, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    z-index: 100;
+    transition: box-shadow 0.2s ease;
+}
+
+/* Shadow appears after scroll */
+.sticky-hero.scrolled {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.sticky-hero-inner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Title link */
+
+.brand {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1b1b1b;
+    text-decoration: none;
+}
+
+.brand:hover {
+    text-decoration: underline;
+}
+
+/* Actions in header */
+
+.header-actions a {
+    margin-left: 0.75rem;
+    padding: 0.45rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+/* Button styles */
+
+.primary {
+    background: #0067b8;
+    color: #ffffff;
+}
+
+.primary:hover {
+    background: #005a9e;
+}
+
+.secondary {
+    border: 1px solid #0067b8;
+    color: #0067b8;
+}
+
+.secondary:hover {
+    background: #f2f7fc;
+}
+
+/* Page content */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 3rem 1.5rem;
+}
+
+p {
+    font-size: 1.05rem;
+    color: #444;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e5e5;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}

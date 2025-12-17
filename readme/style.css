@@ -1,0 +1,44 @@
+/* Markdown-style content */
+
+.markdown h1 {
+    font-size: 2.4rem;
+    margin-top: 0;
+}
+
+.markdown h2 {
+    margin-top: 2.5rem;
+    font-size: 1.6rem;
+}
+
+.markdown h3 {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.markdown ul {
+    padding-left: 1.5rem;
+}
+
+.markdown li {
+    margin: 0.4rem 0;
+}
+
+.markdown pre {
+    background: #f5f5f5;
+    padding: 1rem;
+    overflow-x: auto;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.markdown code {
+    font-family: Consolas, "Courier New", monospace;
+}
+
+.markdown a {
+    color: #0067b8;
+}
+
+.markdown a:hover {
+    text-decoration: underline;
+}
